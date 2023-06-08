@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#252525">
+
+    <!-- Üst Bölüm -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp"
+        android:background="#252525">
+
+        <!-- Profil Fotoğrafı -->
+        <ImageView
+            android:id="@+id/profile_image"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:src="@drawable/ic_launcher_background"
+            android:layout_alignParentStart="true"
+            android:layout_marginEnd="16dp" />
+
+        <!-- Kullanıcı Adı ve Açıklaması -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/profile_image"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kullanıcı Adı"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#f5f5f5"/>
+
+            <TextView
+                android:id="@+id/user_description"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kullanıcı Açıklaması"
+                android:textSize="16sp"
+                android:textColor="#f5f5f5"/>
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/follow_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:backgroundTint="#f5f5f5"
+            android:textColor="#252525"
+            android:text="Blood"/>
+
+    </RelativeLayout>
+
+    <!-- Takipçi ve Takip Edilenler -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:text="Send Message"
+            android:backgroundTint="#f5f5f5"
+            android:textColor="#252525"
+            android:id="@+id/gotoChatfragment"
+            android:onClick="gotoChatFragment"/>
+    </LinearLayout>
+
+    <!-- Gönderi Listesi -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/post_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+</LinearLayout>
